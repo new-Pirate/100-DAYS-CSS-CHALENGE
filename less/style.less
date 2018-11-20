@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #263A4D;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.topWave {
+	position: relative;
+	top: 100px;
+	width: 400px;
+	height: 200px;
+	background-color: #406384;
+	
+	.lineTopWaves {
+		bottom: 175px;
+		position: absolute;
+		display: flex;
+		animation: movementTopWave 5s ease-in-out alternate infinite;
+		
+		.evenTopWave {
+			width: 50px;
+			height: 50px;
+			background-color: #263A4D;
+			border-radius: 0 0 25px 25px;
+			bottom: 25px;
+		}
+	
+		.oddTopWave {
+			width: 50px;
+			height: 50px;
+			background-color: #406384;
+			border-radius: 25px 25px 0 0;
+		}
+	}
+	
+		.midleWave {
+			position: relative;
+			top: 60px;
+			width: 500px;
+			height: 140px;
+			background-color: #5D90BF;
+
+			.lineMidleWaves {
+				bottom: 115px;
+				right: 20px;
+				position: absolute;
+				display: flex;
+				animation: movementMidleWave 5s ease-in-out alternate infinite;
+
+			.evenMidleWave {
+				width: 50px;
+				height: 50px;
+				background-color:  #406384;
+				border-radius: 0 0 25px 25px;
+				bottom: 25px;
+			}
+
+			.oddMidleWave {
+				width: 50px;
+				height: 50px;
+				background-color:  #5D90BF;
+				border-radius: 25px 25px 0 0;
+			}
+		}
+			
+		.botWave {
+			position: relative;
+			top: 60px;
+			width: 400px;
+			height: 80px;
+			background-color: #7EB3E6;
+			
+				.lineBotWaves {
+					bottom: 55px;
+					position: absolute;
+					display: flex;
+					animation: movementBotWave 5s ease-in-out alternate infinite;
+
+				.evenBotWave {
+					width: 50px;
+					height: 50px;
+					background-color: #5D90BF;
+					border-radius: 0 0 25px 25px;
+					bottom: 25px;
+				}
+
+				.oddBotWave {
+					width: 50px;
+					height: 50px;
+					background-color: #7EB3E6;
+					border-radius: 25px 25px 0 0;
+				}
+			}
+		}
+	}
+}
+
+@keyframes movementTopWave {
+	100%{
+		transform: translateX(-50px);
+	}
+}
+
+@keyframes movementMidleWave {
+	100%{
+		transform: translateX(30px);
+	}
+}
+
+@keyframes movementBotWave {
+	100%{
+		transform: translateX(-100px);
+	}
+}
