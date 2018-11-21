@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2B4147;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circleWrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #F2F2F2;
+  border-radius: 50%;
+}
+.circleWrap:hover .circleGradient .board .arrow {
+  transform: rotate(60deg);
+}
+.circleWrap:hover .circleGradient .board .indications .currentTemperatureAll .currentTemperature1 {
+  transform: translateX(-50px) scale(0.5);
+  opacity: 0;
+}
+.circleWrap:hover .circleGradient .board .indications .currentTemperatureAll .currentTemperature2 {
+  transform: translateX(-50px) scale(1);
+  opacity: 1;
+}
+.circleWrap .circleGradient {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(90deg, #582169, #ba306a);
+  border-radius: 50%;
+}
+.circleWrap .circleGradient .triangle {
+  position: absolute;
+  left: -10px;
+  top: -19px;
+  border: 100px solid transparent;
+  border-bottom: 100px solid #F2F2F2;
+  border-radius: 50%;
+}
+.circleWrap .circleGradient .board {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+.circleWrap .circleGradient .board .arrow {
+  position: absolute;
+  top: 60px;
+  left: 2px;
+  width: 10px;
+  height: 1px;
+  background: #000;
+  transform: rotate(30deg);
+  transition: 0.5s ease-in-out;
+  transform-origin: 60px 0;
+}
+.circleWrap .circleGradient .board .indications {
+  position: relative;
+  top: 15px;
+  left: 34px;
+  width: 60px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.circleWrap .circleGradient .board .indications .normalTemperature {
+  font-size: 14px;
+}
+.circleWrap .circleGradient .board .indications .currentTemperatureAll {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+}
+.circleWrap .circleGradient .board .indications .currentTemperatureAll .currentTemperature1 {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  color: #873183;
+  transition: 0.5s ease-in-out;
+}
+.circleWrap .circleGradient .board .indications .currentTemperatureAll .currentTemperature2 {
+  position: absolute;
+  opacity: 0;
+  left: 50px;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  color: #7D2769;
+  transform: translateX(0) scale(0.5);
+  transition: 0.5s ease-in-out;
+}
+.circleWrap .circleGradient .board .indications .bedroom {
+  font-size: 14px;
+}
