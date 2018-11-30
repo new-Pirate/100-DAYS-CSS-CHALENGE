@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2C3E50;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.layers::before {
+  content: 'hover me';
+  top: 165px;
+  left: 100px;
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s linear;
+}
+.layers::after {
+  content: '';
+  top: 180px;
+  left: 115px;
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  background: #8E44AD;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.layers:hover::before {
+  color: #fff;
+  transform: translate(15px, 15px);
+  background: #8E44AD;
+}
+.layers:hover::after {
+  transform: translate(-15px, -15px);
+  background: #fff;
+}
