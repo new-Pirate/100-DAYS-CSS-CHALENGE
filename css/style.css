@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #5A717B;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.wrap input[type=checkbox] {
+  display: none;
+}
+.wrap .check {
+  top: -20px;
+  left: -20px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.wrap input[type=checkbox]:checked ~ .check {
+  top: -20px;
+  left: -20px;
+  position: absolute;
+  border: 16px solid #fff;
+  width: 12px;
+  height: 12px;
+  background: #5FD17A;
+  border-radius: 50%;
+}
+.wrap .rays {
+  z-index: 1;
+  top: -80px;
+  left: -80px;
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.wrap .rays .ray {
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.wrap .rays .ray1 {
+  transform: translate(80px, 46px);
+  opacity: 0;
+}
+.wrap .rays .ray2 {
+  transform: rotate(45deg) translate(108px, -34px);
+  opacity: 0;
+}
+.wrap .rays .ray3 {
+  transform: rotate(90deg) translate(74px, -110px);
+  opacity: 0;
+}
+.wrap .rays .ray4 {
+  transform: rotate(135deg) translate(-4px, -138px);
+  opacity: 0;
+}
+.wrap .rays .ray5 {
+  transform: translate(80px, 102px);
+  opacity: 0;
+}
+.wrap .rays .ray6 {
+  transform: rotate(225deg) translate(-110px, -24px);
+  opacity: 0;
+}
+.wrap .rays .ray7 {
+  transform: rotate(270deg) translate(-74px, 52px);
+  opacity: 0;
+}
+.wrap .rays .ray8 {
+  transform: rotate(315deg) translate(3px, 82px);
+  opacity: 0;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray1 {
+  transform: translate(80px, 0);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray2 {
+  transform: rotate(45deg) translate(108px, -78px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray3 {
+  transform: rotate(90deg) translate(74px, -153px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray4 {
+  transform: rotate(135deg) translate(0px, -180px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray5 {
+  transform: translate(80px, 146px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray6 {
+  transform: rotate(225deg) translate(-110px, -70px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray7 {
+  transform: rotate(270deg) translate(-74px, 6px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+.wrap input[type=checkbox]:checked ~ .rays .ray8 {
+  transform: rotate(315deg) translate(0px, 34px);
+  animation: swipe 0.3s ease-in-out 1;
+}
+@keyframes swipe {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
