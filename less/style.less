@@ -1,0 +1,234 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #333333;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.keyboard {
+    position: absolute;
+    width: 400px;
+    height: 160px;
+    background: #666666;
+    border-top: 2px solid #888888;
+    padding: 5px 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .symbols {
+        display: none;
+    }
+
+    .labels {
+        width: 34px;
+        height: 34px;
+        margin: 3px;
+        font-size: 16px;
+        line-height: 34px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50%;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        &:hover {
+            background: #999;
+        }
+    }
+
+    .circleLight {
+        position: absolute;
+        top: -120px;
+        left: 185px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 15px 0 #fff;
+        opacity: 0;
+    }
+
+    #lineBreak{
+        margin-right: 150px;
+    }
+
+    #symbol-a:checked ~ .circleLight {
+        animation: point 0.2s 1s, dash 1.5s 2s;
+    }
+
+    #symbol-b:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, point 0.2s 4s, point 0.2s 5s;
+    }
+
+    #symbol-c:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, dash 1.5s 4s, point 0.2s 6.5s;
+    }
+
+    #symbol-d:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, point 0.2s 4s;
+    }
+
+    #symbol-e:checked ~ .circleLight {
+        animation: point 0.2s 0.5s;
+    }
+
+    #symbol-f:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, dash 1.5s 2.5s, point 0.2s 5s;
+    }
+
+    #symbol-g:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, point 0.2s 5.5s;
+    }
+
+    #symbol-h:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, point 0.2s 4.5s;
+    }
+
+    #symbol-i:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s;
+    }
+
+    #symbol-j:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, dash 1.5s 5.5s;
+    }
+
+    #symbol-k:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s;
+    }
+
+    #symbol-l:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, dash 1.5s 1.5s, point 0.2s 4s, point 0.2s 5s;
+    }
+
+    #symbol-m:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s;
+    }
+
+    #symbol-n:checked ~ .circleLight {
+        animation: point 0.2s 1.5s;
+    }
+
+    #symbol-o:checked ~ .circleLight {
+        animation: dash 1.5s 1.5s, dash 1.5s 4s;
+    }
+
+    #symbol-p:checked ~ .circleLight {
+        animation: point 0.2s 1s, point 0.2s 5s;
+    }
+
+    #symbol-q:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 4s, dash 1.5s 5s;
+    }
+
+    #symbol-r:checked ~ .circleLight {
+        animation: point 0.2s 0.5s;
+    }
+
+    #symbol-s:checked ~ .circleLight {
+        animation: point 0.2s 2s;
+    }
+
+    #symbol-t:checked ~ .circleLight {
+        animation: dash 1.5s 0.2s;
+    }
+
+    #symbol-u:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, dash 1.5s 3.5s;
+    }
+
+    #symbol-v:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, point 0.2s 2.5s, dash 1.5s 3.5s;
+    }
+
+    #symbol-w:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, dash 1.5s 1.5s, dash 1.5s 4s;
+    }
+
+    #symbol-x:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, point 0.2s 4s, dash 1.5s 5s;
+    }
+
+    #symbol-y:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, dash 1.5s 4s, dash 1.5s 6.5s;
+    }
+
+    #symbol-z:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, point 0.2s 5.5s, point 0.2s 6.5s;
+    }
+
+    #symbol-0:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, dash 1.5s 5.5s, dash 1.5s 8s, dash 1.5s 10.5s;
+    }
+
+    #symbol-1:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, dash 1.5s 1.5s, dash 1.5s 4s, dash 1.5s 6.5s, dash 1.5s 9s;
+    }
+
+    #symbol-2:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, dash 1.5s 2.5s, dash 1.5s 5s, dash 1.5s 7.5s;
+    }
+
+    #symbol-3:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, point 0.2s 2.5s, dash 1.5s 3.5s, dash 1.5s 6s;
+    }
+
+    #symbol-4:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, point 0.2s 2.5s, point 0.2s 3.5s, dash 1.5s 4.5s;
+    }
+
+    #symbol-5:checked ~ .circleLight {
+        animation: point 0.2s 0.5s, point 0.2s 1.5s, point 0.2s 2.5s, point 0.2s 3.5s, point 0.2s 4.5s;
+    }
+
+    #symbol-6:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, point 0.2s 3s, point 0.2s 4s, point 0.2s 5s, point 0.2s 6s;
+    }
+
+    #symbol-7:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, point 0.2s 5.5s, point 0.2s 6.5s, point 0.2s 7.5s;
+    }
+
+    #symbol-8:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, dash 1.5s 5.5s, point 0.2s 8s, point 0.2s 9s;
+    }
+
+    #symbol-9:checked ~ .circleLight {
+        animation: dash 1.5s 0.5s, dash 1.5s 3s, dash 1.5s 5.5s, dash 1.5s 8s, point 0.2s 10.5s;
+    }
+
+    @keyframes point {
+        0%, 100%{
+            opacity: 0;
+        }
+
+        1%, 99% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes dash {
+        0%, 100%{
+            opacity: 0;
+        }
+
+        1%, 99% {
+            opacity: 1;
+        }
+    }
+}
