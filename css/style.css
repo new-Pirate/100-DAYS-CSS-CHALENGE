@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #3498DB;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  top: -100px;
+  left: -100px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.circle-1 {
+  animation: transformation 5s ease-in-out infinite;
+}
+.circle-2 {
+  animation: transformation 5s ease-in-out 0.1s infinite;
+}
+.circle-3 {
+  animation: transformation 5s ease-in-out 0.2s infinite;
+}
+.circle-4 {
+  animation: transformation 5s ease-in-out 0.3s infinite;
+}
+.circle-5 {
+  animation: transformation 5s ease-in-out 0.4s infinite;
+}
+.circle-6 {
+  animation: transformation 5s ease-in-out 0.5s infinite;
+}
+.circle-7 {
+  animation: transformation 5s ease-in-out 0.6s infinite;
+}
+.circle-8 {
+  animation: transformation 5s ease-in-out 0.7s infinite;
+}
+.circle-9 {
+  animation: transformation 5s ease-in-out 0.8s infinite;
+}
+.circle-10 {
+  animation: transformation 5s ease-in-out 0.9s infinite;
+}
+@keyframes transformation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-360deg) rotateY(360deg);
+  }
+}
