@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #F39C12;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap {
+  display: flex;
+  font-size: 30px;
+  height: 42px;
+  overflow: hidden;
+}
+.wrap .string {
+  margin-right: 6px;
+}
+.wrap .swapBlock {
+  font-weight: 700;
+  animation: swap 8s ease-in-out infinite;
+}
+@keyframes swap {
+  0%,
+  20% {
+    transform: translateY(0px);
+  }
+  25%,
+  45% {
+    transform: translateY(-41px);
+  }
+  50%,
+  70% {
+    transform: translateY(-82px);
+  }
+  75%,
+  95% {
+    transform: translateY(-122px);
+  }
+  100% {
+    transform: translateY(-164px);
+  }
+}
