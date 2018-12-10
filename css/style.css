@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #1ABC9C;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap {
+  display: flex;
+}
+.wrap .checks {
+  display: none;
+}
+.wrap .labels {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  line-height: 30px;
+  margin: 5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.wrap .labels::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.wrap .labels:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.wrap #check1:checked ~ .label1 {
+  background: none;
+  color: #1ABC9C;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #check1:checked ~ .label1::before {
+  transform: scale(1);
+}
+.wrap #check2:checked ~ .label2 {
+  background: none;
+  color: #1ABC9C;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #check2:checked ~ .label2::before {
+  transform: scale(1);
+}
+.wrap #check3:checked ~ .label3 {
+  background: none;
+  color: #1ABC9C;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #check3:checked ~ .label3::before {
+  transform: scale(1);
+}
+.wrap #check4:checked ~ .label4 {
+  background: none;
+  color: #1ABC9C;
+  transition: all 0.5s ease-in-out;
+}
+.wrap #check4:checked ~ .label4::before {
+  transform: scale(1);
+}
