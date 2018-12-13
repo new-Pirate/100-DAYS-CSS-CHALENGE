@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #9B59B6;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  position: absolute;
+  top: -25px;
+  left: -175px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  animation: moveCircle 2s ease-in-out infinite;
+}
+.circle .phantomCircles {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.3;
+  animation: movePhantomCircles 2s ease-in-out infinite;
+}
+.circle .phantomCircle-1 {
+  animation: movePhantomCircle-1 2s ease-in-out infinite;
+}
+.circle .phantomCircle-2 {
+  animation: movePhantomCircle-2 2s ease-in-out infinite;
+}
+.circle .phantomCircle-3 {
+  animation: movePhantomCircle-3 2s ease-in-out infinite;
+}
+.circle .phantomCircle-4 {
+  animation: movePhantomCircle-4 2s ease-in-out infinite;
+}
+.circle .phantomCircle-5 {
+  animation: movePhantomCircle-5 2s ease-in-out infinite;
+}
+.circle .phantomCircle-6 {
+  animation: movePhantomCircle-5 2s ease-in-out infinite;
+}
+@keyframes movePhantomCircle-1 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-40px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movePhantomCircle-2 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-32px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(32px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movePhantomCircle-3 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-24px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(24px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movePhantomCircle-4 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-16px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(16px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movePhantomCircle-5 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes movePhantomCircle-6 {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes moveCircle {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
