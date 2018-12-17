@@ -1,0 +1,112 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute; // top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px; // margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #9B59B6;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ball {
+    position: absolute;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50px;
+    left: 400px;
+    animation: move 3s infinite,
+        scales 3s infinite;
+
+}
+
+.floor {
+    background: #49627C;
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    bottom: 0;
+}
+
+@keyframes move {
+    0% {
+        animation-timing-function: cubic-bezier(.36, .18, .90, .63); //перваый опуск
+    }
+
+    20% {
+        top: 234px;
+        left: 260px;
+        animation-timing-function: cubic-bezier(.30, .51, .71, .95); //первый подъем
+    }
+
+    35% {
+        top: 100px;
+        left: 180px;
+        animation-timing-function: cubic-bezier(.36, .18, .90, .63); //второй опуск
+    }
+
+    50% {
+        top: 234px;
+        left: 120px;
+        animation-timing-function: cubic-bezier(.30, .51, .71, .95); //второй подъем
+    }
+
+    65% {
+        top: 140px;
+        left: 50px;
+        animation-timing-function: cubic-bezier(.36, .18, .90, .63); //третий опуск
+    }
+
+    80% {
+        top: 234px;
+        left: 0px;
+        animation-timing-function: cubic-bezier(.30, .51, .71, .95); //третий подъем
+    }
+
+    100% {
+        top: 180px;
+        left: -40px;
+        animation-timing-function: cubic-bezier(.36, .18, .90, .63);//четвертый опуск
+    }
+}
+
+@keyframes scales {
+    0%, 19% {
+        transform: scale(1);
+    }
+
+    20%, 21% {
+        transform: scale(1.1, 0.9);
+    }
+
+    21%, 49% {
+        transform: scale(1);
+    }
+
+    50%, 51% {
+        transform: scale(1.1, 0.9);
+    }
+
+    51%, 79% {
+        transform: scale(1);
+    }
+
+    80%, 81% {
+        transform: scale(1.1, 0.9);
+    }
+
+    81%, 100% {
+        transform: scale(1);
+    }
+}
