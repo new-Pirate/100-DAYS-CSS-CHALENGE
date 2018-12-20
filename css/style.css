@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #E3E7EA;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.book {
+  position: relative;
+  top: 60px;
+  left: 100px;
+  width: 200px;
+  height: 280px;
+  border-radius: 2px 4px 4px 2px;
+  box-shadow: -2px 3px 5px 0px rgba(0, 0, 0, 0.38);
+  background: linear-gradient(45deg, #1e1e1e, #4e4e4e);
+}
+.book::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 280px;
+  border-radius: 2px 0 0 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #282828 0%, #484848 20%, #4e4e4e 47%, #1c1c1c 52%, rgba(40, 40, 40, 0.6) 86%, rgba(32, 32, 32, 0.15) 100%);
+}
+.book .title {
+  position: absolute;
+  font-weight: 600;
+  width: 140px;
+  top: 50px;
+  left: 38px;
+  line-height: 1;
+}
+.book .title .bigWords {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+.book .title .smallWords {
+  color: #C6C6C6;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.book::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 282px;
+  border-radius: 1px;
+  top: -1px;
+  right: 30px;
+  background: linear-gradient(to right, #a70329 0%, #900028 12%, #a70329 24%, #900028 36%, #a70329 48%, #900028 59%, #a70329 70%, #900028 82%, #a70329 94%);
+}
