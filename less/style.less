@@ -1,0 +1,93 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #34495E;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pendulum {
+    position: absolute;
+    top: 140px;
+    left: 100px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+
+    .basis {
+        position: absolute;
+        width: 200px;
+        height: 6px;
+        border-radius: 6px;
+        background: #BDC3C7;
+    }
+
+    .line {
+
+        .thread {
+            margin-left: 20px;
+            width: 1px;
+            height: 100px;
+            background: #BDC3C7;
+        }
+
+        .ball {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+        }
+    }
+
+    .lineMoveLeft {
+        animation: lineMoveLeft 1.6s ease-in-out infinite;
+        transform-origin: 50% 0%;
+    }
+
+    .lineMoveRight {
+        animation: lineMoveRight 1.6s ease-in-out 0.8s infinite;
+        transform-origin: 50% 0%;
+    }
+
+    @keyframes lineMoveLeft {
+        21% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(30deg);
+        }
+
+        79% {
+            transform: rotate(0);
+        }
+    }
+
+    @keyframes lineMoveRight {
+        21% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(-30deg);
+        }
+
+        79% {
+            transform: rotate(0);
+        }
+    }
+}
