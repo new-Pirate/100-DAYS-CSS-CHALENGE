@@ -1,0 +1,117 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #FFC902;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ruby {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 130px;
+
+    .face {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    .face1 {
+        border-left: 30px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 40px solid #9E0707;
+    }
+
+    .face2 {
+        border-left: 20px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid #DC2323;
+        left: 30px;
+    }
+
+    .face3 {
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid #BC0E0E;
+        left: 50px;
+        z-index: 3;
+    }
+
+    .face4 {
+        width: 60px;
+        height: 40px;
+        background: #F58181;
+        left: 90px;
+        overflow: hidden;
+
+        .shine {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            z-index: 2;
+            width: 5px;
+            height: 70px;
+            background: #fff;
+            transform: rotate(-45deg);
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: rotate(-45deg) translateX(0);
+            }
+            
+            20%, 100% {
+                transform: rotate(-45deg) translateX(60px);
+            }
+        }
+    }
+
+    .face5 {
+        border-left: 20px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 40px solid #B90B0C;
+        left: 130px;
+        z-index: 3;
+    }
+
+    .face6 {
+        border-left: 90px solid transparent;
+        border-top: 90px solid #890505;
+        top: 40px;
+    }
+
+    .face7 {
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 90px solid #A51012;
+        top: 40px;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .face8 {
+        border-right: 90px solid transparent;
+        border-top: 90px solid #C81718;
+        top: 40px;
+        left: 90px;
+    }
+}
