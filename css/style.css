@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #34495E;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cube {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transform: rotateX(-25deg) rotateY(45deg);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.cube:hover {
+  transform: rotateX(-25deg) rotateY(45deg) translateY(-20px);
+}
+.cube:hover .bottom {
+  box-shadow: -30px 30px 30px 10px rgba(0, 0, 0, 0.4);
+}
+.cube .wall {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.cube .left {
+  transform: rotateY(-90deg) translateZ(60px);
+}
+.cube .left:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2EC36D;
+  transform-origin: 50% 100%;
+  animation: upSide 4s ease-in-out infinite alternate;
+}
+.cube .right {
+  transform: rotateY(90deg) translateZ(60px);
+}
+.cube .right:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2EC36D;
+  transform-origin: 50% 100%;
+  animation: upSide 4s ease-in-out infinite alternate;
+}
+.cube .back {
+  transform: translateZ(-60px);
+}
+.cube .back:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2EC36D;
+  transform-origin: 50% 100%;
+  animation: upSide 4s ease-in-out infinite alternate;
+}
+.cube .front {
+  transform: translateZ(60px);
+}
+.cube .front:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2EC36D;
+  transform-origin: 50% 100%;
+  animation: upSide 4s ease-in-out infinite alternate;
+}
+.cube .bottom {
+  transform: rotateX(90deg) translateZ(-60px);
+  background: #2EC36D;
+  box-shadow: -10px 10px 10px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+.cube .top {
+  transform: rotateX(90deg) translateZ(-60px);
+  background: #2EC36D;
+  animation: upTop 4s ease-in-out infinite alternate;
+}
+.cube .top-top {
+  transform: rotateX(90deg) translateZ(60px);
+  opacity: 0.5;
+}
+@keyframes upSide {
+  0%,
+  20% {
+    transform: scaleY(0);
+  }
+  75%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes upTop {
+  0%,
+  20% {
+    transform: rotateX(90deg) translateZ(-60px);
+  }
+  75%,
+  100% {
+    transform: rotateX(90deg) translateZ(60px);
+  }
+}
